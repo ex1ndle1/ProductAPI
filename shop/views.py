@@ -4,7 +4,7 @@ from .models import Product
 # Create your views here.
 from rest_framework import viewsets, generics           
 
-#used that viewsets.ModelViewSet to provide CRUD operations for Product model
+#used that viewsets to provide CRUD operations for Product model
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
