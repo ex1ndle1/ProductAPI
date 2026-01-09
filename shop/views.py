@@ -9,7 +9,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-class ProductListByChildCategorySlug(generics.ListAPIView):
+class ProductListSlug(generics.ListAPIView):
     serializer_class = ProductSerializer
     def get_queryset(self):
         category_slug = self.kwargs['slug']        
