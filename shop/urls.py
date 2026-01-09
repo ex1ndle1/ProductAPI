@@ -8,5 +8,5 @@ router.register('products', ProductViewSet, basename='product')
 
 urlpatterns = [ 
     path('', include(router.urls)),
-      path('products/category/<slug:slug>/', ProductListSlug.as_view(), name='products-by-category'),
+      path('products/<slug:slug>/', ProductListSlug.as_view(), name='products-by-category'),
 ]
